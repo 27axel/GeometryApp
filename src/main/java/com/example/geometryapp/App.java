@@ -3,6 +3,7 @@ package com.example.geometryapp;
 import com.example.geometry.Circle;
 import com.example.geometry.Rectangle;
 import com.example.geometry.Triangle;
+import com.example.geometryutils.Utils;
 
 public class App {
     public static void main( String[] args ) {
@@ -18,5 +19,14 @@ public class App {
 
         System.out.println("Triangle area: " + triangle.getArea());
         System.out.println("Triangle perimeter: " + triangle.getPerimeter());
+
+        Circle circle1 = new Circle(5);
+        Circle circle2 = new Circle(5);
+
+        System.out.println("Circle1 area: " + circle1.getArea());
+        System.out.println("Circle2 area: " + circle2.getArea());
+
+        boolean areEqual = Utils.compareAreas(circle1, circle2);
+        System.out.println("Are the circles equal in area? " + areEqual);
     }
 }
